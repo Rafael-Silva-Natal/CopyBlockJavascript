@@ -1,0 +1,159 @@
+#cabeça{
+  width: 100%;
+}
+#opçoes{
+  display: inline-block;
+    /*vertical-align: top;*/
+    /*margin-right: 350px;/*define a distancia entre as divs*/ 
+}
+#cabe{
+  display: inline-block;
+}
+
+.cabeçalho{
+  margin-top: 0px;
+  color:rgb(73, 79, 196);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.9em;
+  border: 0px;
+  text-indent: 120px;
+  text-shadow: 2px 2px rgb(56, 202, 221);
+
+}
+
+
+
+#meusBotoes {
+    display: inline-block;/*define formato e cores para a box e conteudo dos botões*/
+    vertical-align: top;
+    margin-right: 150px;/*define a distancia entre as divs*/
+    
+    overflow-y: auto;/* sobre a barra de rolagem */
+  height: 450px; /* ou qualquer outra altura desejada */
+    
+  }
+  
+  #botao1,
+  #botao2,
+  #botao3,
+  #botaoApagar,
+  #botaoCopiar,
+  #botaoApagarLinha {/*define espaçamento entre os botões*/
+    margin: 5px;
+  }
+  
+  #minhaDiv {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    /*display: flex;*/
+    justify-content: center;
+    align-items:flex-start;
+    height: 100vh;
+    top: 0;
+
+    overflow-x: auto;/* sobre a barra de rolagem */
+    height: 80%; /* ou qualquer outra largura desejada */
+
+
+    color: rgb(150, 243, 150);/*define a cor de sáda do texto dos botões para a pagina*/
+    font-family:'Courier New', Courier, monospace; /* exemplo de fonte */
+    font-size:18px; /* exemplo de tamanho */
+    text-shadow: 1.5px 1.5px rgb(132, 19, 184);
+    
+  }
+  #minhaDiv p {
+    margin-top: 0;/*para que o texto fique colado na parte superior da paigina */
+  }
+
+
+
+
+
+  #mensagem {
+    background-color: #226304;/*define estilização de box do botoes de forma independente*/
+    color: rgb(228, 151, 209);
+    border: 3px solid rgb(4, 192, 44);
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.9em;
+    text-align:center;
+    text-shadow: 1px 1px rgb(78, 63, 143);
+  }
+  #botao1,
+  #botao2,
+  #botao3,
+  #botao4,
+  #botao5,
+  #botao6,
+  #botao7,
+  #botao8,
+  #botao9,
+  #botao10,
+  #botao11,
+  #botao12,
+  #botao13,
+  #botao14,
+  #botao15,
+  #botao16,
+  #botao17,
+  #botao18,
+  #botao19,
+  #botao20,
+  #botao21,
+  #botao22,
+  #botao23,
+  #botao24,
+  #botao25,
+  #botao26,
+  #botao27,
+  #botao28,
+  #botao29
+  {
+    background-color: #094b0f;/*define estilização de box do botoes de forma independente*/
+    color: rgb(115, 206, 40);
+    border: 3px solid rgb(135, 12, 151);
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.9em;
+    text-align:center;
+  }
+
+
+  #botaoApagar,
+  #botaoCopiar,
+  #botaoApagarLinha{
+    background-color: #a6f382;/*define estilização de box do botoes de forma independente*/
+    color: rgb(129, 33, 129);
+    border: 3px solid rgb(13, 97, 31);
+    padding: 5px;
+    margin: 5px;
+    width: 145px;
+    height: 27px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.9em;
+    text-align:center;
+
+  }
+
+
+
+  .titulos{
+    color: rgb(242, 204, 247);
+    text-shadow: 1px 1px rgb(78, 63, 143);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .titu{
+    color: rgb(242, 204, 247);
+    text-shadow: 1px 1px rgb(78, 63, 143);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.1em;
+  }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#meusBotoes {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#botao1,
+#botao2,
+#botaoApagar,
+#botaoCopiar {
+  margin: 10px;
+}
+
+#minhaDiv {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+
+</style>
+<body>
+    <div id="conteudo">
+        <div id="meusBotoes">
+          <button id="botao1">Botão 1</button>
+          <button id="botao2">Botão 2</button>
+          <button id="botaoApagar">Apagar</button>
+          <button id="botaoCopiar">Copiar texto</button>
+        </div>
+        <div id="minhaDiv"></div>
+      </div>
+      
+      
+      
+
+
+
+    <script>
+
+// seleciona os botões pelo ID
+const botao1 = document.querySelector("#botao1");
+const botao2 = document.querySelector("#botao2");
+const botaoApagar = document.querySelector("#botaoApagar");
+const botaoCopiar = document.querySelector("#botaoCopiar");
+
+// seleciona a div pelo ID
+const minhaDiv = document.querySelector("#minhaDiv");
+
+// adiciona ouvintes de evento de clique aos botões
+botao1.addEventListener("click", function() {
+  // adiciona o texto à div, com uma quebra de linha
+  minhaDiv.innerHTML += "O botão 1 foi clicado!<br>";
+});
+
+botao2.addEventListener("click", function() {
+  // adiciona o texto à div, com uma quebra de linha
+  minhaDiv.innerHTML += "O botão 2 foi clicado!<br>";
+});
+
+botaoApagar.addEventListener("click", function() {
+  // define o conteúdo da div como vazio
+  minhaDiv.innerHTML = "";
+});
+
+botaoCopiar.addEventListener("click", function() {
+  // cria um elemento de texto temporário
+  const tempEl = document.createElement("textarea");
+  // define o valor do texto como o conteúdo da div
+  tempEl.value = minhaDiv.innerText;
+  // adiciona o elemento temporário ao DOM
+  document.body.appendChild(tempEl);
+  // seleciona todo o texto no elemento temporário
+  tempEl.select();
+  // copia o texto selecionado para a área de transferência
+  document.execCommand("copy");
+  // remove o elemento temporário do DOM
+  document.body.removeChild(tempEl);
+});
+
+
+
+
+    </script>
+
+
+</body>
+</html>

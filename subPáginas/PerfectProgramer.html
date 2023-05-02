@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#meusBotoes {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#botao1,
+#botao2,
+#botaoApagar,
+#botaoCopiar,
+#botaoApagarLinha {
+  margin: 10px;
+}
+
+#minhaDiv {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+
+</style>
+<body>
+    <div id="conteudo">
+        <div id="meusBotoes">
+          <button id="botao1">Botão 1</button>
+          <button id="botao2">Botão 2</button>
+          <button id="botaoApagar">Apagar tudo</button>
+          <button id="botaoCopiar">Copiar texto</button>
+          <button id="botaoApagarLinha">Apagar linha</button>
+        </div>
+        <div id="minhaDiv"></div>
+      </div>
+
+
+      <script>
+
+// seleciona os botões pelo ID
+const botao1 = document.querySelector("#botao1");
+const botao2 = document.querySelector("#botao2");
+const botaoApagar = document.querySelector("#botaoApagar");
+const botaoCopiar = document.querySelector("#botaoCopiar");
+const botaoApagarLinha = document.querySelector("#botaoApagarLinha");
+
+// seleciona a div pelo ID
+const minhaDiv = document.querySelector("#minhaDiv");
+
+// array para armazenar as linhas de texto
+let linhasDeTexto = [];
+
+// adiciona ouvintes de evento de clique aos botões
+botao1.addEventListener("click", function() {
+  // adiciona o texto ao array
+  linhasDeTexto.push("O botão 1 foi clicado!");
+  // atualiza o conteúdo da div
+  atualizarDiv();
+});
+
+botao2.addEventListener("click", function() {
+  // adiciona o texto ao array
+  linhasDeTexto.push("O botão 2 foi clicado!");
+  // atualiza o conteúdo da div
+  atualizarDiv();
+});
+
+botaoApagar.addEventListener("click", function() {
+  // limpa o array
+  linhasDeTexto = [];
+  // atualiza o conteúdo da div
+  atualizarDiv();
+});
+
+botaoCopiar.addEventListener("click", function() {
+  // cria um elemento de texto temporário
+  const tempEl = document.createElement("textarea");
+  // define o valor do texto como o conteúdo da div
+  tempEl.value = linhasDeTexto.join("\n");
+  // adiciona o elemento temporário ao DOM
+  document.body.appendChild(tempEl);
+  // seleciona todo o texto no elemento temporário
+  tempEl.select();
+  // copia o texto selecionado para a área de transferência
+  document.execCommand("copy");
+  // remove o elemento temporário do DOM
+  document.body.removeChild(tempEl);
+});
+
+botaoApagarLinha.addEventListener("click", function() {
+  // verifica se há linhas de texto
+  if (linhasDeTexto.length > 0) {
+    // remove a primeira linha do array
+    linhasDeTexto.splice(0, 1);
+    // atualiza o conteúdo da div
+    atualizarDiv();
+  }
+});
+
+// função para atualizar o conteúdo da div
+function atualizarDiv() {
+  // define o conteúdo da div como vazio
+  minhaDiv.innerHTML = "";
+  // itera sobre o array de linhas de texto
+  for (let i = 0; i < linhasDeTexto.length; i++) {
+    // adiciona cada linha de texto à div, com uma quebra de linha
+    minhaDiv.innerHTML += linhasDeTexto[i] + "<br>";
+  }
+}
+
+
+
+      </script>
+</body>
+</html>
